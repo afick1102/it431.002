@@ -9,7 +9,7 @@ using System.Web.Routing;
 
 namespace IT431Site
 {
-    //Change
+    //Change: Andrew Fick 4.24.2017
     public class MvcApplication : System.Web.HttpApplication
     {
         protected void Application_Start()
