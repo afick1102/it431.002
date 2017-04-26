@@ -7,7 +7,7 @@ using System.Web;
 
 namespace IT431Site.DAL
 {
-    public class SiteDataContext:DbContext
+    public class SiteDataContext1:DbContext
     {
         public DbSet<Widget> Widgets { get; set; }
 

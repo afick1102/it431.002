@@ -183,7 +183,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ReservationsController.cs" />
     <Compile Include="Controllers\WidgetsController.cs" />
-    <Compile Include="DAL\SiteDataContext.cs" />
+    <Compile Include="DAL\SiteDataContext1.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

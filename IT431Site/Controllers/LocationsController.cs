@@ -13,7 +13,7 @@ namespace IT431Site.Controllers
 {
     public class LocationsController : Controller
     {
-        private SiteDataContext db = new SiteDataContext();
+        private SiteDataContext1 db = new SiteDataContext1();
 
         // GET: Locations
         public ActionResult Index()

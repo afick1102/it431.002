@@ -14,7 +14,7 @@ namespace IT431Site.Controllers
     //hello?
     public class WidgetsController : Controller
     {
-        private SiteDataContext db = new SiteDataContext();
+        private SiteDataContext1 db = new SiteDataContext1();
 
         // GET: Widgets
         public ActionResult Index()

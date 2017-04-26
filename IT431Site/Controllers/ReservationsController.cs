@@ -13,7 +13,7 @@ namespace IT431Site.Controllers
 {
     public class ReservationsController : Controller
     {
-        private SiteDataContext db = new SiteDataContext();
+        private SiteDataContext1 db = new SiteDataContext1();
 
         // GET: Reservations
         public ActionResult Index()
