@@ -47,7 +47,7 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,Location,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,Location,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {

@@ -12,11 +12,13 @@ namespace IT431Site.Models
 
         [Required]
         [Display(Name = "Date Open")]
-        public DateTime DateOpen { get; set; }
+        [DataType(DataType.Date)]
+        public string DateOpen { get; set; }
 
         [Required]
         [Display(Name = "Date Closed")]
-        public DateTime DateClosed { get; set; }
+        [DataType(DataType.Date)]
+        public string DateClosed { get; set; }
 
         [Required]
         [Display(Name = "Location Name")]
@@ -31,8 +33,7 @@ namespace IT431Site.Models
         [Required]
         [Display(Name = "Location Type")]
         public string LocationType { get; set; }
-
-        [Required]
+        
         [Display(Name = "Additional Benefits")]
         public string AddBenefit { get; set; }
     }

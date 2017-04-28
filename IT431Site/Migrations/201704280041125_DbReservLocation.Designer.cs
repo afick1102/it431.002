@@ -7,13 +7,13 @@ namespace IT431Site.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class addwidget : IMigrationMetadata
+    public sealed partial class DbReservLocation : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addwidget));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(DbReservLocation));
         
         string IMigrationMetadata.Id
         {
-            get { return "201704210026113_addwidget"; }
+            get { return "201704280041125_DbReservLocation"; }
         }
         
         string IMigrationMetadata.Source

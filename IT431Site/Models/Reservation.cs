@@ -26,12 +26,18 @@ namespace IT431Site.Models
         public string CustomerEmail { get; set; }
 
         [Required]
+        [Display(Name = "Location")]
+        public string Location { get; set; }
+
+        [Required]
         [Display(Name = "Start Date")]
-        public DateTime StartDate { get; set; }
+        [DataType(DataType.Date)]
+        public string StartDate { get; set; }
 
         [Required]
         [Display(Name = "End Date")]
-        public DateTime EndDate { get; set; }
+        [DataType(DataType.Date)]
+        public string EndDate { get; set; }
 
         [Required]
         [Display(Name = "Travel Reason")]
