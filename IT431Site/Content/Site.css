@@ -22,3 +22,26 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.center-vert {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.body-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* ------------- JUMBOTRON -------------- */
+.jumbotron {
+    color: #fff;
+    margin-bottom: 0px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.5)
+    ), url(/images/hero-img.jpg) no-repeat fixed center;
+    background-size: cover;
+    height: 500px;
+}
