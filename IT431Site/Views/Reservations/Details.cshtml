@@ -4,87 +4,89 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="container body-content">
+    <h2>Details</h2>
 
-<div>
-    <h4>Reservation</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </dt>
+    <div>
+        <h4>Reservation</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CustomerName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerPhone)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerPhone)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerPhone)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CustomerPhone)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CustomerEmail)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerEmail)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.CustomerEmail)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.CustomerEmail)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.StartDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.StartDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EndDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.EndDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.EndDate)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TravelReason)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.TravelReason)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.TravelReason)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.TravelReason)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AdultNum)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.AdultNum)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.AdultNum)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.AdultNum)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ChildrenNum)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ChildrenNum)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ChildrenNum)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ChildrenNum)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Request)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Request)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Request)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Request)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
