@@ -47,7 +47,7 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,DateOpen,DateClosed,LocationName,LocationDescription,LocationType,AddBenefit")] Location location)
+        public ActionResult Create([Bind(Include = "Id,DateOpen,DateClosed,LocationName,LocationDescription,LocationType,AddBenefit,LocationImg")] Location location)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,DateOpen,DateClosed,LocationName,LocationDescription,LocationType,AddBenefit")] Location location)
+        public ActionResult Edit([Bind(Include = "Id,DateOpen,DateClosed,LocationName,LocationDescription,LocationType,AddBenefit,LocationImg")] Location location)
         {
             if (ModelState.IsValid)
             {

@@ -223,6 +223,14 @@
     <Compile Include="Migrations\201705032053345_LocationIDChange.Designer.cs">
       <DependentUpon>201705032053345_LocationIDChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705031955449_DbLocaImgCol.cs" />
+    <Compile Include="Migrations\201705031955449_DbLocaImgCol.Designer.cs">
+      <DependentUpon>201705031955449_DbLocaImgCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705032018586_AddLocationImage.cs" />
+    <Compile Include="Migrations\201705032018586_AddLocationImage.Designer.cs">
+      <DependentUpon>201705032018586_AddLocationImage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdultList.cs" />
@@ -283,7 +291,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\adventure.jpg" />
+    <Content Include="images\family.jpg" />
+    <Content Include="images\fine-dining.jpg" />
+    <Content Include="images\hawaii-resort.JPG" />
     <Content Include="images\hero-img.jpg" />
+    <Content Include="images\poolside.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -351,6 +364,8 @@
     <Content Include="Views\Locations\Details.cshtml" />
     <Content Include="Views\Locations\Edit.cshtml" />
     <Content Include="Views\Locations\Index.cshtml" />
+    <Content Include="Views\Shared\_LocationsDisplayView.cshtml" />
+    <Content Include="Views\Home\Locations.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -389,6 +404,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705032053345_LocationIDChange.resx">
       <DependentUpon>201705032053345_LocationIDChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705031955449_DbLocaImgCol.resx">
+      <DependentUpon>201705031955449_DbLocaImgCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032018586_AddLocationImage.resx">
+      <DependentUpon>201705032018586_AddLocationImage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
