@@ -231,6 +231,10 @@
     <Compile Include="Migrations\201705032018586_AddLocationImage.Designer.cs">
       <DependentUpon>201705032018586_AddLocationImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705032131243_newMigration.cs" />
+    <Compile Include="Migrations\201705032131243_newMigration.Designer.cs">
+      <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdultList.cs" />
@@ -410,6 +414,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705032018586_AddLocationImage.resx">
       <DependentUpon>201705032018586_AddLocationImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032131243_newMigration.resx">
+      <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
