@@ -26,6 +26,10 @@ namespace IT431Site.Models
         public string LocationName { get; set; }
 
         [Required]
+        [Display(Name = "Profile Image")]
+        public string LocationImg { get; set; }
+
+        [Required]
         [Display(Name = "Location Description")]
         [StringLength(100)]
         public string LocationDescription { get; set; }

@@ -14,6 +14,7 @@ namespace IT431Site.Controllers
     public class ReservationsController : Controller
     {
         private SiteDataContext1 db = new SiteDataContext1();
+        
 
         // GET: Reservations
         public ActionResult Index()
@@ -51,6 +52,7 @@ namespace IT431Site.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -116,6 +118,7 @@ namespace IT431Site.Controllers
             return RedirectToAction("Index");
         }
 
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
