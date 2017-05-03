@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201705032131243_newMigration.Designer.cs">
       <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705032312586_DbNothing.cs" />
+    <Compile Include="Migrations\201705032312586_DbNothing.Designer.cs">
+      <DependentUpon>201705032312586_DbNothing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdultList.cs" />
@@ -419,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705032131243_newMigration.resx">
       <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032312586_DbNothing.resx">
+      <DependentUpon>201705032312586_DbNothing.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
