@@ -232,9 +232,30 @@ hr {
 }
 
 .nav.navbar-nav li a:hover {
-    color: #4CCBC5;
+    color: #fff;
 }
 
+.navbar-nav > li > .dropdown-menu {
+    background-color: #080808;
+}
+
+.dropdown-menu > li:hover > a:hover {
+    background-color: #45b4ae;
+    color: #fff;
+}
+
+ul.dropdown-menu li a {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+ul.dropdown-menu li a:hover {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+        background-color: #45b4ae;
+}
 
 /* -------------------- PANELS -------------------- */
 .location-panel {
