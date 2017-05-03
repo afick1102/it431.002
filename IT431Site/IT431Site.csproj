@@ -236,6 +236,14 @@
     <Compile Include="Migrations\201705032131243_newMigration.Designer.cs">
       <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705032221238_VS Fix.cs" />
+    <Compile Include="Migrations\201705032221238_VS Fix.Designer.cs">
+      <DependentUpon>201705032221238_VS Fix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705032317057_POST_CHANGES.cs" />
+    <Compile Include="Migrations\201705032317057_POST_CHANGES.Designer.cs">
+      <DependentUpon>201705032317057_POST_CHANGES.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AdultList.cs" />
@@ -419,6 +427,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705032131243_newMigration.resx">
       <DependentUpon>201705032131243_newMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032221238_VS Fix.resx">
+      <DependentUpon>201705032221238_VS Fix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705032317057_POST_CHANGES.resx">
+      <DependentUpon>201705032317057_POST_CHANGES.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

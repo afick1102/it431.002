@@ -17,6 +17,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="Author" class="control-label col-md-2">Author</label>
+                        <div class="col-md-10">
+                            <input type="text" id="Author" name="Author" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <label for="Title" class="control-label col-md-2">Content</label>
                         <div class="col-md-10">
                             <textarea class="form-control" id="Content" name="Content" rows="3"></textarea>
@@ -44,9 +50,10 @@
 
             $("#submit").click(function () {
                 var title = $("#Title").val();
+                var author = $("#Author").val();
                 var content = $("#Content").val();
 
-                var post = { Title: title, Content: content }
+                var post = { Title: title, Author: author, Content: content }
                 $.ajax({
                     url: "/api/Posts",
                     type: "Post",
@@ -55,7 +62,7 @@
                     success: function (item) {
                         addPost(item);
                     },
-                    error: function () { alert('error'); }
+                    error: function () { alert('There was an error when trying to post your comment. Please try again later.'); }
                 });
             });
 
