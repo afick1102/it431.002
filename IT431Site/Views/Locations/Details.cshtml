@@ -4,65 +4,69 @@
     ViewBag.Title = "Details";
 }
 
-<div class="container body-content">
-    <h2>Details</h2>
+<div class="main">
+    <div class="container">
+        <div class="body-content">
+            <h2>Details</h2>
 
-    <div>
-        <h4>Location</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.DateOpen)
-            </dt>
+            <div>
+                <h4>Location</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateOpen)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.DateOpen)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateOpen)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.DateClosed)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.DateClosed)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.DateClosed)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.DateClosed)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LocationName)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LocationName)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LocationName)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.LocationName)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LocationDescription)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LocationDescription)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LocationDescription)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.LocationDescription)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.LocationType)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LocationType)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.LocationType)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.LocationType)
+                    </dd>
 
-            <dt>
-                @Html.DisplayNameFor(model => model.AddBenefit)
-            </dt>
+                    <dt>
+                        @Html.DisplayNameFor(model => model.AddBenefit)
+                    </dt>
 
-            <dd>
-                @Html.DisplayFor(model => model.AddBenefit)
-            </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.AddBenefit)
+                    </dd>
 
-        </dl>
+                </dl>
+            </div>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
 </div>

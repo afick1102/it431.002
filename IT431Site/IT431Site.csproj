@@ -227,6 +227,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\adventure.jpg" />
+    <Content Include="images\family.jpg" />
     <Content Include="images\fine-dining.jpg" />
     <Content Include="images\hero-img.jpg" />
     <Content Include="images\poolside.jpg" />
