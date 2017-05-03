@@ -25,7 +25,6 @@ namespace IT431Site.Controllers.API
         [ResponseType(typeof(Post))]
         public IHttpActionResult Post(Post post)
         {
-            post.Author = "John Smith";
             post.Date = DateTime.Now;
             db.Posts.Add(post);
             db.SaveChanges();
