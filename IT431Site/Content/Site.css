@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: #3e3e42;
+    background-color: #222222;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -34,6 +36,27 @@ textarea {
     margin-bottom: 50px;
 }
 
+.text-shadow {
+    text-shadow: 2px 2px 3px rgba(0,0,0,.08);
+}
+/* -------------- HEADINGS --------------- */
+h1, h2, h3, h4, h5, h6 {
+    color: #fffffa;
+    display: inline-block;
+    padding: .4em 0;
+    margin: 0 0 .5em 0;
+    border-bottom: 2px solid #4CCBC5;
+}
+
+.light-head {
+    color: #fffffa;
+}
+
+.featured-img {
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+}
 /* ------------- JUMBOTRON -------------- */
 .jumbotron {
     color: #fff;
@@ -41,7 +64,52 @@ textarea {
     background: linear-gradient(
       rgba(0, 0, 0, 0.2), 
       rgba(0, 0, 0, 0.5)
-    ), url(/images/hero-img.jpg) no-repeat fixed center;
+    ), url(/images/hero-img.jpg) no-repeat fixed bottom;
     background-size: cover;
-    height: 500px;
+    height: 600px;
+}
+
+/* --------------- BUTTON --------------- */
+.btn-primary {
+    background-color: #4CCBC5;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #45b4ae;
+}
+
+.btn-default {
+    border-color: #4CCBC5;
+    color: #247B7B;
+}
+
+.btn-default:hover {
+    background-color: #4CCBC5;
+    border-color: #4CCBC5;
+    color: #fffffa;
+}
+
+/* --------------- SECTIONS --------------- */
+.featured {
+    color: #b5b5b5;
+    background-color: #222222;
+    padding: 50px 0px;
+}
+
+.featured h2 {
+    color: #fffffa;
+}
+
+.home-section {
+    background-color: white;
+    padding: 70px 0px;
+}
+
+.home-section h3 {
+    color: #999;
+}
+
+.p-home {
+
 }
