@@ -14,5 +14,7 @@ namespace IT431Site.DAL
         public DbSet<Reservation> Reservations { get; set; }
 
         public System.Data.Entity.DbSet<IT431Site.Models.Location> Locations { get; set; }
+
+        public DbSet<Post> Posts { get; set; }
     }
 }

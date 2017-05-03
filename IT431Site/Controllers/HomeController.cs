@@ -1,4 +1,5 @@
 ﻿using IT431Site.DAL;
+using IT431Site.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,23 @@ namespace IT431Site.Controllers
         public ActionResult Locations()
         {
             return View(db.Locations.ToList());
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AddPost([Bind(Include = "Id,Title,Author,Content,Date")] Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                post.Date = DateTime.Now;
+                post.Author = "John Smith";
+                db.Posts.Add(post);
+                db.SaveChanges();
+                return RedirectToAction("About");
+            }
+
+            return RedirectToAction("About");
         }
     }
 }

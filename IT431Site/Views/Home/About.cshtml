@@ -1,11 +1,109 @@
 ﻿@{
     ViewBag.Title = "About GoFar";
 }
-<div class="main">
+<section class="main">
     <div class="container">
         <div class="body-content">
-            <h2 class="medium-head">@ViewBag.Title.</h2>
-            <p>Use this area to provide additional information.</p>
+            <div class="row">
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Add Post</h4>
+
+                    <div class="form-group">
+                        <label for="Title" class="control-label col-md-2">Title</label>
+                        <div class="col-md-10">
+                            <input type="text" id="Title" name="Title" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Title" class="control-label col-md-2">Content</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="Content" name="Content" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input id="submit" type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
         </div>
     </div>
-</div>
+</section>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#submit").click(function () {
+                var title = $("#Title").val();
+                var content = $("#Content").val();
+
+                var post = { Title: title, Content: content }
+                $.ajax({
+                    url: "/api/Posts",
+                    type: "Post",
+                    data: JSON.stringify(post),
+                    contentType: 'application/json; charset=utf-8',
+                    success: function (item) {
+                        addPost(item);
+                    },
+                    error: function () { alert('error'); }
+                });
+            });
+
+
+            function addPost(item) {
+                var postDate = new Date(item.Date);
+                var rows = "<article class='blogpost'><header><h2><a href='#'><span id='postTitle'>"
+                            + item.Title
+                            + "</span></a></h2><div class='post-info'>"
+                            + "<span class='post-date'><i class='icon-calendar'></i><span id='postDate'>"
+                            + postDate.toDateString()
+                            + "</span></span><span class='submitted'><i class='icon-user-1'>"
+                            + "</i> by <a href='#'><span id='postAuthor'>"
+                            + item.Author
+                            + "</span></a></span>"
+                            + "<span class='comments'><i class='icon-chat'></i> <a href='#'>0 comments</a>"
+                            + "</span></div></header><div class='blogpost-content'><span id='postContent'>"
+                            + item.Content
+                            + "</span></div></article>";
+
+                $('#posts').append(rows);
+            }
+
+
+            function loadPosts() {
+
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/posts',
+                    dataType: 'json',
+                    success: function (data) {
+                        var items = '';
+                        $.each(data, function (i, item) {
+                            addPost(item);
+                        });
+                    },
+                    error: function (ex) {
+                        var r = jQuery.parseJSON(response.responseText);
+                        alert("Message: " + r.Message);
+                        alert("StackTrace: " + r.StackTrace);
+                        alert("ExceptionType: " + r.ExceptionType);
+                    }
+                });
+                return false;
+            }
+
+            loadPosts();
+
+        })
+    </script>
+}
