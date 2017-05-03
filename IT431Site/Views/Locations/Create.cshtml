@@ -5,7 +5,7 @@
 }
 
 <div class="container body-content">
-    <h2>Create</h2>
+    <h2>Create a new Location</h2>
 
 
     @using (Html.BeginForm())
@@ -43,7 +43,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.LocationDescription, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.LocationDescription, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.TextAreaFor(model => model.LocationDescription, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.LocationDescription, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -51,7 +51,8 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.LocationType, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.LocationType, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.RadioButtonFor(model => model.LocationType, "Hotel", new { htmlAttributes = new { @class = "radio-inline" } }) Hotel
+                    @Html.RadioButtonFor(model => model.LocationType, "Resort", new { htmlAttributes = new { @class = "radio-inline" } }) Resort
                     @Html.ValidationMessageFor(model => model.LocationType, "", new { @class = "text-danger" })
                 </div>
             </div>
@@ -77,6 +78,21 @@
     </div>
 </div>
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/cssjqryUi")
+
+    <script type="text/javascript">
+
+             $(document).ready(function () {
+                 $('input[type=datetime]').datepicker({
+                     changeMonth: true,
+                     changeYear: true,
+                     yearRange: "-60:+0"
+                 });
+
+             });
+    </script>
+}

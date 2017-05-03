@@ -27,7 +27,9 @@ namespace IT431Site.Models
 
         [Required]
         [Display(Name = "Location")]
-        public string Location { get; set; }
+        public int? LocationID { get; set; }
+
+        public virtual Location Location { get; set; }
 
         [Required]
         [Display(Name = "Start Date")]

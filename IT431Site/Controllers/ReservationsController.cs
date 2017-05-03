@@ -39,6 +39,7 @@ namespace IT431Site.Controllers
         // GET: Reservations/Create
         public ActionResult Create()
         {
+            ViewBag.LocationID = new SelectList(db.Locations, "Id", "LocationName");
             return View();
         }
 
@@ -47,10 +48,11 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,Location,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
+        public ActionResult Create([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,LocationID,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
+                ViewBag.LocationID = new SelectList(db.Locations, "Id", "LocationName", reservation.LocationID);
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -71,6 +73,7 @@ namespace IT431Site.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.LocationID = new SelectList(db.Locations, "Id", "LocationName", reservation.LocationID);
             return View(reservation);
         }
 
@@ -79,10 +82,11 @@ namespace IT431Site.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,Location,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
+        public ActionResult Edit([Bind(Include = "Id,CustomerName,CustomerPhone,CustomerEmail,LocationID,StartDate,EndDate,TravelReason,AdultNum,ChildrenNum,Request")] Reservation reservation)
         {
             if (ModelState.IsValid)
             {
+                ViewBag.LocationID = new SelectList(db.Locations, "Id", "LocationName", reservation.LocationID);
                 db.Entry(reservation).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");

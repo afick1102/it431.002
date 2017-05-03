@@ -12,22 +12,22 @@ namespace IT431Site.Models
 
         [Required]
         [Display(Name = "Date Open")]
-        [DataType(DataType.Date)]
-        public string DateOpen { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public Nullable<System.DateTime> DateOpen { get; set; }
 
         [Required]
         [Display(Name = "Date Closed")]
-        [DataType(DataType.Date)]
-        public string DateClosed { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public Nullable<System.DateTime> DateClosed { get; set; }
 
         [Required]
         [Display(Name = "Location Name")]
-        [StringLength(30)]
+        [StringLength(50)]
         public string LocationName { get; set; }
 
         [Required]
         [Display(Name = "Location Description")]
-        [StringLength(100)]
+        [StringLength(200)]
         public string LocationDescription { get; set; }
 
         [Required]
