@@ -99,8 +99,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     margin-bottom: 0px;
     background: linear-gradient(
-      rgba(0, 0, 0, 0.2), 
-      rgba(0, 0, 0, 0.5)
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.1)
     ), url(/images/hero-img.jpg) no-repeat fixed bottom;
     background-size: cover;
     height: 47em;
@@ -234,6 +234,55 @@ hr {
 .nav.navbar-nav li a:hover {
     color: #4CCBC5;
 }
+
+
+/* -------------------- PANELS -------------------- */
+.location-panel {
+    margin: 2em 0;
+}
+.panel-default > .panel-heading {
+    background-color: #ffffff;
+    border-bottom: none;
+}
+
+div.panel-body {
+    background-color: #ffffff;
+}
+
+div.panel-footer {
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+div.panel-default, div.panel {
+    /*border-color: rgba(0, 0, 0, .05);*/
+    border: 1px solid transparent;
+    background-color: transparent;
+    border-radius: .5em;
+}
+
+div.location-desc {
+    color: #3e3e42;
+    margin-top: .5em;
+}
+
+.location-title {
+    text-align: center;
+}
+
+.location-title h4 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #999;
+    display: inline-block;
+    padding: .4em 0;
+    border-bottom: 2px solid #45b4ae;
+}
+
+.location-img {
+    border-radius: .5em;
+}
+
 
 .main {
     background-color:white;

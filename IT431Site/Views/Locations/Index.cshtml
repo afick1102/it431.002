@@ -12,6 +12,16 @@
             <p>
                 @Html.ActionLink("Create New", "Create")
             </p>
+
+            <div class="row is-flex">
+                @foreach (var item in Model)
+                {
+                    @Html.Partial("_LocationsDisplayView", item)
+                }
+            </div>
+
+
+
             <table class="table">
                 <tr>
                     <th>

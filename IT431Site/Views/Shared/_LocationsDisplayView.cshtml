@@ -1,0 +1,29 @@
+﻿@model IT431Site.Models.Location
+
+<div class="location-panel col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="location-title">
+                <h4 class="text-center">@Model.LocationName</h4>
+            </div>
+        </div>
+        <div class="panel-body">
+            <img class="location-img img-responsive" src="~/images/fine-dining.jpg" />
+            <div class="location-desc">
+                @Model.LocationDescription
+            </div>
+        </div>
+        <div class="panel-footer clearfix">
+            <div class="pull-right">
+               <!--if (Request.IsAuthenticated)
+                   {-->
+                    <span class="pull-right">
+                        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+                    </span><!--}-->
+                <span class="pull-right">@Model.LocationType &nbsp;</span>
+            </div>
+        </div>
+    </div>
+</div>

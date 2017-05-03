@@ -1,0 +1,20 @@
+﻿@model IEnumerable<IT431Site.Models.Location>
+@{
+    ViewBag.Title = "Locations";
+}
+
+<div class="main">
+    <div class="container">
+        <div class="body-content">
+
+                <h2>Locations</h2>
+
+                <div class="row is-flex">
+                    @foreach (var item in Model)
+                    {
+                        @Html.Partial("_LocationsDisplayView", item)
+                    }
+                </div>
+         </div>
+    </div>
+</div>

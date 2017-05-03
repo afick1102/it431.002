@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IT431Site.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace IT431Site.Controllers
 {
     public class HomeController : Controller
     {
+        private SiteDataContext1 db = new SiteDataContext1();
+
         public ActionResult Index()
         {
             return View();
@@ -25,6 +28,11 @@ namespace IT431Site.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult Locations()
+        {
+            return View(db.Locations.ToList());
         }
     }
 }
