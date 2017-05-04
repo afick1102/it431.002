@@ -5,15 +5,15 @@
     <div class="container">
         <div class="body-content">
             <div class="row">
-
+                <h2 class="medium-head">What Our Customers Are Saying About Us...</h2>
                 <div id="posts">
 
 
 
                 </div>
 
-                <div class="form-horizontal">
-                    <h4>Add Post</h4>
+                <div class="form-horizontal comments">
+                    <h3>Add a Review</h3>
 
                     
 
@@ -76,9 +76,9 @@
 
             function addPost(item) {
                 var postDate = new Date(item.Date);
-                var rows = "<article class='blogpost'><header><h2><a href='#'><span id='postTitle'>"
+                var rows = "<article class='blogpost'><header><h3><a href='#'><span id='postTitle'>"
                             + item.Title
-                            + "</span></a></h2><div class='post-info'>"
+                            + "</span></a></h3><div class='post-info'>"
                             + "<span class='post-date'><i class='icon-calendar'></i><span id='postDate'>"
                             + postDate.toDateString()
                             + "</span></span><span class='submitted'><i class='icon-user-1'>"
