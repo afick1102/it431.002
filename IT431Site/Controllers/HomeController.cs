@@ -44,7 +44,6 @@ namespace IT431Site.Controllers
             if (ModelState.IsValid)
             {
                 post.Date = DateTime.Now;
-                post.Author = "John Smith";
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("About");
