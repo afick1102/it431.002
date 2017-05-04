@@ -16,5 +16,6 @@ namespace IT431Site.DAL
         public System.Data.Entity.DbSet<IT431Site.Models.Location> Locations { get; set; }
 
         public DbSet<Post> Posts { get; set; }
+
     }
 }

@@ -41,9 +41,6 @@
                     <th>
                         @Html.DisplayNameFor(model => model.ChildrenNum)
                     </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Request)
-                    </th>
                     <th></th>
                 </tr>
 
@@ -76,9 +73,6 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.ChildrenNum)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Request)
                         </td>
                         <td>
                             @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

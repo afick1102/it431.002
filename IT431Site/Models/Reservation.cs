@@ -33,13 +33,13 @@ namespace IT431Site.Models
 
         [Required]
         [Display(Name = "Start Date")]
-        [DataType(DataType.Date)]
-        public string StartDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public Nullable<System.DateTime> StartDate { get; set; }
 
         [Required]
         [Display(Name = "End Date")]
-        [DataType(DataType.Date)]
-        public string EndDate { get; set; }
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
+        public Nullable<System.DateTime> EndDate { get; set; }
 
         [Required]
         [Display(Name = "Travel Reason")]
@@ -52,10 +52,6 @@ namespace IT431Site.Models
         [Required]
         [Display(Name = "Number of Children")]
         public ChildrenList ChildrenNum { get; set; }
-
-        [Display(Name = "Special Request")]
-        [StringLength(100)]
-        public string Request { get; set; }
 
     }
 }

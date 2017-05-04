@@ -40,7 +40,7 @@
                         @Html.DisplayNameFor(model => model.LocationType)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.AddBenefit)
+                        @Html.DisplayName("Benefits Added?")
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.LocationImg)
@@ -67,7 +67,14 @@
                             @Html.DisplayFor(modelItem => item.LocationType)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.AddBenefit)
+                            @if(item.BenefitsAdded == true || item.BreakfastAdded == true || item.GymAdded == true || item.HousekeepingAdded == true)
+                            {
+                                @Html.DisplayName("Yes")
+                            }
+                            else
+                            {
+                                @Html.DisplayName("No")
+                            }
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.LocationImg)

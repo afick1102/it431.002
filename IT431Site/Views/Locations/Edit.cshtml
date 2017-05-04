@@ -52,20 +52,48 @@
                         </div>
                     </div>
 
-            <div class="form-group">
-                @Html.LabelFor(model => model.LocationType, htmlAttributes: new { @class = "control-label col-md-2" })
-                <div class="col-md-10">
-                    @Html.RadioButtonFor(model => model.LocationType, "Hotel", new { htmlAttributes = new { @class = "radio-inline" } }) Hotel
-                    @Html.RadioButtonFor(model => model.LocationType, "Resort", new { htmlAttributes = new { @class = "radio-inline" } }) Resort
-                    @Html.ValidationMessageFor(model => model.LocationType, "", new { @class = "text-danger" })
-                </div>
-            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LocationType, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.RadioButtonFor(model => model.LocationType, "Hotel", new { htmlAttributes = new { @class = "radio-inline" } }) Hotel
+                            @Html.RadioButtonFor(model => model.LocationType, "Resort", new { htmlAttributes = new { @class = "radio-inline" } }) Resort
+                            @Html.ValidationMessageFor(model => model.LocationType, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
                     <div class="form-group">
-                        @Html.LabelFor(model => model.AddBenefit, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.LabelFor(model => model.BenefitsAdded, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.AddBenefit, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.AddBenefit, "", new { @class = "text-danger" })
+                            @Html.CheckBoxFor(model => model.BenefitsAdded, htmlAttributes: new { @class = "checkbox-inline" })
+                            @Html.HiddenFor(model => model.BenefitsAdded)
+                            @Html.ValidationMessageFor(model => model.BenefitsAdded, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HousekeepingAdded, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.CheckBoxFor(model => model.HousekeepingAdded, htmlAttributes: new { @class = "checkbox-inline" })
+                            @Html.HiddenFor(model => model.HousekeepingAdded)
+                            @Html.ValidationMessageFor(model => model.HousekeepingAdded, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.GymAdded, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.CheckBoxFor(model => model.GymAdded, htmlAttributes: new { @class = "checkbox-inline" })
+                            @Html.HiddenFor(model => model.GymAdded)
+                            @Html.ValidationMessageFor(model => model.GymAdded, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.BreakfastAdded, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.CheckBoxFor(model => model.BreakfastAdded, htmlAttributes: new { @class = "checkbox-inline" })
+                            @Html.HiddenFor(model => model.BreakfastAdded)
+                            @Html.ValidationMessageFor(model => model.BreakfastAdded, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
@@ -73,7 +101,7 @@
                         @Html.LabelFor(model => model.LocationImg, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.LocationImg, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.LocationImg, "", new { @class = "text-danger" })
+                            @Html.ValidationMessageFor(model => model.LocationImg, "", new { @class = "text - danger" })
                         </div>
                     </div>
 

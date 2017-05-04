@@ -177,6 +177,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\PostsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -243,6 +244,50 @@
     <Compile Include="Migrations\201705032317057_POST_CHANGES.cs" />
     <Compile Include="Migrations\201705032317057_POST_CHANGES.Designer.cs">
       <DependentUpon>201705032317057_POST_CHANGES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040518401_location_checkbox1.cs" />
+    <Compile Include="Migrations\201705040518401_location_checkbox1.Designer.cs">
+      <DependentUpon>201705040518401_location_checkbox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705040541046_location_checkbox2.cs" />
+    <Compile Include="Migrations\201705040541046_location_checkbox2.Designer.cs">
+      <DependentUpon>201705040541046_location_checkbox2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705041859453_location_checkbox3.cs" />
+    <Compile Include="Migrations\201705041859453_location_checkbox3.Designer.cs">
+      <DependentUpon>201705041859453_location_checkbox3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705041908182_location_checkbox4.cs" />
+    <Compile Include="Migrations\201705041908182_location_checkbox4.Designer.cs">
+      <DependentUpon>201705041908182_location_checkbox4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042020102_location_boolean1.cs" />
+    <Compile Include="Migrations\201705042020102_location_boolean1.Designer.cs">
+      <DependentUpon>201705042020102_location_boolean1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042047163_locationImage.cs" />
+    <Compile Include="Migrations\201705042047163_locationImage.Designer.cs">
+      <DependentUpon>201705042047163_locationImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042128044_locationImage2.cs" />
+    <Compile Include="Migrations\201705042128044_locationImage2.Designer.cs">
+      <DependentUpon>201705042128044_locationImage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042143567_reservationchanges.cs" />
+    <Compile Include="Migrations\201705042143567_reservationchanges.Designer.cs">
+      <DependentUpon>201705042143567_reservationchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042206230_stupidcrap.cs" />
+    <Compile Include="Migrations\201705042206230_stupidcrap.Designer.cs">
+      <DependentUpon>201705042206230_stupidcrap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042215021_reservefix1.cs" />
+    <Compile Include="Migrations\201705042215021_reservefix1.Designer.cs">
+      <DependentUpon>201705042215021_reservefix1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705042252462_IDC2.cs" />
+    <Compile Include="Migrations\201705042252462_IDC2.Designer.cs">
+      <DependentUpon>201705042252462_IDC2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -383,6 +428,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\LocationImages\Thumbnails\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -433,6 +479,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705032317057_POST_CHANGES.resx">
       <DependentUpon>201705032317057_POST_CHANGES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040518401_location_checkbox1.resx">
+      <DependentUpon>201705040518401_location_checkbox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705040541046_location_checkbox2.resx">
+      <DependentUpon>201705040541046_location_checkbox2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041859453_location_checkbox3.resx">
+      <DependentUpon>201705041859453_location_checkbox3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041908182_location_checkbox4.resx">
+      <DependentUpon>201705041908182_location_checkbox4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042020102_location_boolean1.resx">
+      <DependentUpon>201705042020102_location_boolean1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042047163_locationImage.resx">
+      <DependentUpon>201705042047163_locationImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042128044_locationImage2.resx">
+      <DependentUpon>201705042128044_locationImage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042143567_reservationchanges.resx">
+      <DependentUpon>201705042143567_reservationchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042206230_stupidcrap.resx">
+      <DependentUpon>201705042206230_stupidcrap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042215021_reservefix1.resx">
+      <DependentUpon>201705042215021_reservefix1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705042252462_IDC2.resx">
+      <DependentUpon>201705042252462_IDC2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

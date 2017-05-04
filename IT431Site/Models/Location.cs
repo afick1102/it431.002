@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace IT431Site.Models
 {
@@ -26,10 +28,6 @@ namespace IT431Site.Models
         public string LocationName { get; set; }
 
         [Required]
-        [Display(Name = "Profile Image")]
-        public string LocationImg { get; set; }
-
-        [Required]
         [Display(Name = "Location Description")]
         [StringLength(200)]
         public string LocationDescription { get; set; }
@@ -37,8 +35,21 @@ namespace IT431Site.Models
         [Required]
         [Display(Name = "Location Type")]
         public string LocationType { get; set; }
-        
-        [Display(Name = "Additional Benefits")]
-        public string AddBenefit { get; set; }
+
+        [Required]
+        [Display(Name ="Location Image")]
+        public string LocationImg { get; set; }
+
+        [Display(Name = "Free WiFi")]
+        public bool BenefitsAdded { get; set; }
+
+        [Display(Name = "Housekeeping")]
+        public bool HousekeepingAdded { get; set; }
+
+        [Display(Name = "24/7 Gym")]
+        public bool GymAdded { get; set; }
+
+        [Display(Name = "Continental Breakfast")]
+        public bool BreakfastAdded { get; set; }
     }
 }
