@@ -313,3 +313,38 @@ div.location-desc {
 .main hr {
     margin-bottom: 3.5em;
 }
+
+/* -------------- COMMENTS -------------- */
+#posts {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+.form-horizontal.comments {
+    background-color: #faf6f6;
+    padding: 2em;
+    border-radius: .5em;
+}
+
+.comments h3 {
+    color: #999;
+}
+
+.blogpost a {
+    text-decoration: none;
+}
+
+.blogpost a:hover, .blogpost a:active, .blogpost a:focus {
+    color: #e1e1e1; 
+}
+
+.blogpost {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 2em;
+    padding-top: 2em;
+}
+
+.post-info {
+    color: #999;
+    margin-bottom: 1em;
+}
