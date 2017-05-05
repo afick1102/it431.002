@@ -53,6 +53,38 @@ namespace IT431Site.Controllers
             if (ModelState.IsValid)
             {
                 ViewBag.LocationID = new SelectList(db.Locations, "Id", "LocationName", reservation.LocationID);
+                /*Location matchingLocation = db.Locations.Where(cm => cm.Id.ToString().CompareTo(reservation.LocationID.ToString())==0).FirstOrDefault();
+                if(matchingLocation != null)
+                {
+                    DateTime date1 = location.DateOpen;
+                    DateTime date2 = location.DateClosed;
+                    DateTime date3 = reservation.StartDate;
+                    DateTime date4 = reservation.EndDate;
+
+                    int result1 = DateTime.Compare(date3, date1);
+                    int result3 = DateTime.Compare(date4, date2);
+                    {
+                        if (result1 < 0)
+                        {
+                            ModelState.AddModelError("StartDate", "Location is not available for the date specified.");
+                            return View(reservation);
+                        }
+
+                        if (result1 >= 0)
+                        {
+                            int result2 = DateTime.Compare(date3, date2);
+                            if (result2 > 0)
+                            {
+                                ModelState.AddModelError("StartDate", "Location is not available for the date specified.");
+                                return View(reservation);
+                            }
+                        }
+                        else if(result3 > 0)
+                        {
+                            ModelState.AddModelError("EndDate", "Location is not avail");
+                        }
+                    }
+                }*/
                 db.Reservations.Add(reservation);
                 db.SaveChanges();
                 return RedirectToAction("Index");

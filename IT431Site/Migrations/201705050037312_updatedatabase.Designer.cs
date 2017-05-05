@@ -7,13 +7,13 @@ namespace IT431Site.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class IDC2 : IMigrationMetadata
+    public sealed partial class updatedatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(IDC2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201705042252462_IDC2"; }
+            get { return "201705050037312_updatedatabase"; }
         }
         
         string IMigrationMetadata.Source

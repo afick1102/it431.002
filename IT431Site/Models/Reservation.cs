@@ -34,12 +34,12 @@ namespace IT431Site.Models
         [Required]
         [Display(Name = "Start Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public Nullable<System.DateTime> StartDate { get; set; }
+        public DateTime StartDate { get; set; }
 
         [Required]
         [Display(Name = "End Date")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public Nullable<System.DateTime> EndDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         [Required]
         [Display(Name = "Travel Reason")]

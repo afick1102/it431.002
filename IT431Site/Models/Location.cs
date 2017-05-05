@@ -15,12 +15,12 @@ namespace IT431Site.Models
         [Required]
         [Display(Name = "Date Open")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public Nullable<System.DateTime> DateOpen { get; set; }
+        public DateTime DateOpen { get; set; }
 
         [Required]
         [Display(Name = "Date Closed")]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:MM/dd/yyyy}")]
-        public Nullable<System.DateTime> DateClosed { get; set; }
+        public DateTime DateClosed { get; set; }
 
         [Required]
         [Display(Name = "Location Name")]
@@ -37,6 +37,7 @@ namespace IT431Site.Models
         public string LocationType { get; set; }
 
         [Required]
+        [MaxLength(100)]
         [Display(Name ="Location Image")]
         public string LocationImg { get; set; }
 
@@ -51,5 +52,7 @@ namespace IT431Site.Models
 
         [Display(Name = "Continental Breakfast")]
         public bool BreakfastAdded { get; set; }
+
+        public string newColumn { get; set; }
     }
 }
